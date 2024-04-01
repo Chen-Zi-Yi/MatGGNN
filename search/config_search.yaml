@@ -1,0 +1,29 @@
+Predict:
+  model: MEGNet
+  model_path: ''
+  data_path: ''
+  output_number: 1000
+  save_path: ''
+
+Search:
+  method: 'sub'
+  elements: [5, 13, 31, 49, 81, 7, 15, 33, 51, 83]
+
+
+Models:
+  MEGNet:
+    dim1: 200
+    dim2: 200
+    dim3: 200
+    pre_fc_count: 1
+    gc_count: 4
+    gc_fc_count: 1
+    post_fc_count: 2
+    pool: "set2set"
+    pool_order: "early"
+    batch_size: 200
+    batch_norm: "True"
+    batch_track_stats: "True"
+    act: "relu"
+    dropout_rate: 0.0
+
